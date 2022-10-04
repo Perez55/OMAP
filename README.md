@@ -119,3 +119,31 @@ Scene 10 (User corrects date and saves)
 
 Scene 11 (Movie date is corrected in list)
 ![scene 11](./writeup_images/Picture11.jpg)
+
+---
+
+## Class Diagram
+
+![class diagram](./writeup_images/class_diagram.jpeg)
+
+Description:
+
+- Com.movies.ui
+    - Model - Handles the data manipulation of the view and communicate with controller
+    - View - main screen of the project where the user can interact with the application, add edit and delete movies
+    - Controller - core logic component of client side that contacts server-side with crud operations
+- Com.movies.dto
+    - Genre.java - Genre class with genre ID and genre type
+    - Movies.java - Movie Class with genre, movieTitle, Year, Description, Rating
+- Com.movies.dao
+    - IMovieService - Interface to work with MovieService
+    - MovieService - Service that handles CRUD operations from controller to actual server
+    - IMovieDatabseContext - Interface to work with MovieContext
+    - MovieContext - Does the actual CRUD operations and Sends data to the Actual database
+- Database - actual cloud or local database with all stored info
+
+---
+
+## Project Board
+
+Located in [Github Projects](https://github.com/users/MrPandey2k/projects/2/views/1)
