@@ -4,9 +4,10 @@ Do you want a place to see the top rated movies? Collaborate on that list to add
 + See top rated international movies
 + Add your own personal favorite movie to the list
 
-## Storybaord
-insert storyboard here
-## Functional Requirements
+---
+## Functional Requirements  
+---  
+
 #### Given
 user has application opened 
 #### When 
@@ -84,46 +85,65 @@ the newly added movies shows up on the table.
 ---
 
 ## Storyboard
+---
+Scene 1 (User Opens OMAP and clicks on MOVIES)  
 
-Scene 1 (User Opens OMAP and clicks on MOVIES)
-![scene 1](./writeup_images/Picture1.jpg)
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture1.jpg">  
 
-Scene 2 (Displays Movie Genres with drop down menu)
-![scene 2](./writeup_images/Picture2.jpg)
+Scene 2 (Displays Movie Genres with drop down menu)  
 
-Scene 3 (User clicks on drop down menu)
-![scene 3](./writeup_images/Picture3.jpg)
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture2.jpg">  
 
-Scene 4 (User clicks on SCI-FI)
-![scene 4](./writeup_images/Picture4.jpg)
 
-### Scenario 1 
-Scene 5 (User searches for movie but no results come up but an option to add their own movie is available)
-![scene 5](./writeup_images/Picture5.jpg)
+Scene 3 (User clicks on drop down menu)  
 
-Scene 6 (User adds movie)
-![scene 6](./writeup_images/Picture6.jpg)
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture3.jpg">
 
-Scene 7 (Movie is added to list)
-![scene 7](./writeup_images/Picture7.jpg)
+Scene 4 (User clicks on SCI-FI)  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture4.jpg">  
+
+---
+### Scenario 1   
+---
+Scene 5 (User searches for movie but no results come up but an option to add their own movie is available)  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture5.jpg">  
+  
+Scene 6 (User adds movie)  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture6.jpg">  
+  
+Scene 7 (Movie is added to list)  
+  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture7.jpg">  
+
+---  
 
 ### Scenario 2 
-Scene 8 (Date of release on “Prometheus” is wrong so the user can correct the date)
-![scene 8](./writeup_images/Picture8.jpg)
+  ---   
+Scene 8 (Date of release on “Prometheus” is wrong so the user can correct the date)  
+   
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture8.jpg">
+  
+Scene 9 (User clicks on Prometheus )  
+  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture9.jpg">  
+  
+  
+Scene 10 (User corrects date and saves)  
+  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture10.jpg">  
+   
 
-Scene 9 (User clicks on Prometheus )
-![scene 9](./writeup_images/Picture9.jpg)
-
-Scene 10 (User corrects date and saves)
-![scene 10](./writeup_images/Picture10.jpg)
-
-Scene 11 (Movie date is corrected in list)
-![scene 11](./writeup_images/Picture11.jpg)
+Scene 11 (Movie date is corrected in list)  
+  
+<img  width="100" height="100" src="https://raw.githubusercontent.com/MrPandey2k/OMAP/main/writeup_images/Picture11.jpg">  
+  
 
 ---
 
-## Class Diagram
-
+## Class Diagram  
+  
+  
+---
 ![class diagram](./writeup_images/class_diagram.jpeg)
 
 Description:
@@ -145,5 +165,5 @@ Description:
 ---
 
 ## Project Board
-
+   
 Located in [Github Projects](https://github.com/users/MrPandey2k/projects/2/views/1)
