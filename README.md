@@ -80,3 +80,42 @@ the newly added movies shows up on the table.
 - **Product Owner/Scrum Master**: Anand Pandey
 - **Front-End Developvers**: Bill Appiagyei, Pruthvi Patel
 - **Back-End Developers**: Anand Pandey & Pranav Mahajan
+
+---
+
+## Storyboard
+
+Scene 1 (User Opens OMAP and clicks on MOVIES)
+![scene 1](./writeup_images/Picture1.jpg)
+
+Scene 2 (Displays Movie Genres with drop down menu)
+![scene 2](./writeup_images/Picture2.jpg)
+
+Scene 3 (User clicks on drop down menu)
+![scene 3](./writeup_images/Picture3.jpg)
+
+Scene 4 (User clicks on SCI-FI)
+![scene 4](./writeup_images/Picture4.jpg)
+
+### Scenario 1 
+Scene 5 (User searches for movie but no results come up but an option to add their own movie is available)
+![scene 5](./writeup_images/Picture5.jpg)
+
+Scene 6 (User adds movie)
+![scene 6](./writeup_images/Picture6.jpg)
+
+Scene 7 (Movie is added to list)
+![scene 7](./writeup_images/Picture7.jpg)
+
+### Scenario 2 
+Scene 8 (Date of release on “Prometheus” is wrong so the user can correct the date)
+![scene 8](./writeup_images/Picture8.jpg)
+
+Scene 9 (User clicks on Prometheus )
+![scene 9](./writeup_images/Picture9.jpg)
+
+Scene 10 (User corrects date and saves)
+![scene 10](./writeup_images/Picture10.jpg)
+
+Scene 11 (Movie date is corrected in list)
+![scene 11](./writeup_images/Picture11.jpg)
