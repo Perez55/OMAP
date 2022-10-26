@@ -4,6 +4,7 @@ public class Movie {
 	public Movie () {
 		
 	}
+	public int movieId;
 	public String movieName;// series_title in json
 	public String posterLink;// url img to movie poster
 	public int year;
@@ -87,6 +88,12 @@ public class Movie {
 	}
 	public void setGross(String gross) {
 		this.gross = gross;
+	}
+	public int getMovieId() {
+		return movieId;
+	}
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
 	}
 	
 }
