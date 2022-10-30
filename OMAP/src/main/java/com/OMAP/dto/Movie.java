@@ -4,9 +4,11 @@ public class Movie {
 	public Movie () {
 		
 	}
+	
+	// Getters and Setters
 	public int movieId;
-	public String movieName;// series_title in json
-	public String posterLink;// url img to movie poster
+	public String movieName; // series_title in json
+	public String posterLink; // url img to movie poster
 	public int year;
 	public float imdbRating;
 	public String runtine;
@@ -17,6 +19,7 @@ public class Movie {
 	public String starFour;
 	public String overview;
 	public String gross;
+
 	public String getMovieName() {
 		return movieName;
 	}

@@ -11,8 +11,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NetworkDAO {
-
-
 	/**
 	 * Return the data found at the given endpoint
 	 * @param endpoint a URL or other location where we can find data.
@@ -47,7 +45,5 @@ public class NetworkDAO {
 			urlConnection.disconnect();
 		}
 		return sb.toString();
-
 	}
-
 }
