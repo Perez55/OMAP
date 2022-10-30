@@ -19,6 +19,7 @@ public class NetworkDAO {
 	 * @return All of the data returned as one string.
 	 * @throws Exception
 	 */
+	 
 	public String request(String endpoint) throws Exception  {
 		StringBuilder sb = new StringBuilder();
 
