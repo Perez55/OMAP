@@ -24,6 +24,7 @@ public class MovieDAO implements IMovieDAO {
 		JSONArray movies = new JSONArray(rawJson);
 		//JSONArray movies = root.getJSONArray("");
 		
+		
 		try {
 			for(int i=0; i < movies.length(); i++) 
 			{
