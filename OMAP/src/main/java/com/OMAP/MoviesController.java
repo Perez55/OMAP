@@ -23,6 +23,7 @@ public class MoviesController {
 	List<Movie> allMovies = new ArrayList<Movie>();
 	List<Movie> testMovies = new ArrayList<Movie>();
 	int number = 46;
+	
 	@PostConstruct
 	private void loadData() {
 		try {
