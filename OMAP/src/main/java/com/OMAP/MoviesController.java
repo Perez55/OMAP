@@ -47,4 +47,10 @@ public class MoviesController {
 		
 		return "list-movies";		
 	}
+
+	@GetMapping(value="/error")
+	public String error() {
+		
+		return "error";
+	}
 }
