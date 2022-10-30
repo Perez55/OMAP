@@ -31,7 +31,7 @@ public class MovieDAO implements IMovieDAO {
 				JSONObject jsonMovie = movies.getJSONObject(i);
 				Movie movie = new Movie();
 				int movieId = i;
-				var  movieName = jsonMovie.get("Series_Title").toString();
+				String  movieName = jsonMovie.get("Series_Title").toString();
 				String posterLink = jsonMovie.getString("Poster_Link");
 				int year = jsonMovie.getInt("Released_Year");
 				float imdbRating = jsonMovie.getInt("IMDB_Rating");
