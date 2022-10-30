@@ -17,6 +17,7 @@ public class Movie {
 	public String starFour;
 	public String overview;
 	public String gross;
+	
 	public String getMovieName() {
 		return movieName;
 	}
