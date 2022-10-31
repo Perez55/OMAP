@@ -2,7 +2,7 @@ package com.OMAP;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.stream.Collectors; //Not Used Yet
 
 import javax.annotation.PostConstruct;
 
@@ -17,12 +17,13 @@ import com.OMAP.dto.Movie;
 
 @Controller
 public class MoviesController {
-	
+
 	@Autowired
 	IMovieDAO moviedao;
 	List<Movie> allMovies = new ArrayList<Movie>();
 	List<Movie> testMovies = new ArrayList<Movie>();
 	int number = 46;
+
 	@PostConstruct
 	private void loadData() {
 		try {
@@ -32,20 +33,20 @@ public class MoviesController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	@RequestMapping(value="/")
+
+	@RequestMapping(value = "/")
 	public String index() {
-		
+
 		return "index";
 	}
-	
+
 	@GetMapping("/list")
 	public String list(Model model) {
 
 		model.addAttribute("testListMovies", testMovies);
-		
-		return "list-movies";		
+
+		return "list-movies";
 	}
 }

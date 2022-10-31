@@ -1,4 +1,5 @@
 package com.OMAP.dao;
+
 import com.OMAP.dto.Movie;
 
 import java.util.ArrayList;
@@ -11,27 +12,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MovieDAO implements IMovieDAO {
-	
+
 	@Autowired
 	NetworkDAO networkDAO;
-	
-	
+
 	public List<Movie> getMovies() throws Exception {
 		List<Movie> allMovies = new ArrayList<Movie>();
-		
+
 		String rawJson = networkDAO.request("https://raw.githubusercontent.com/MrPandey2k/OMAP/main/movies.json");
-		
+
 		JSONArray movies = new JSONArray(rawJson);
-		//JSONArray movies = root.getJSONArray("");
-		
+		// JSONArray movies = root.getJSONArray("");
+
 		try {
-			for(int i=0; i < movies.length(); i++) 
-			{
+			for (int i = 0; i < movies.length(); i++) {
 				// parse JSON
 				JSONObject jsonMovie = movies.getJSONObject(i);
 				Movie movie = new Movie();
 				int movieId = i;
-				var  movieName = jsonMovie.get("Series_Title").toString();
+				var movieName = jsonMovie.get("Series_Title").toString();
 				String posterLink = jsonMovie.getString("Poster_Link");
 				int year = jsonMovie.getInt("Released_Year");
 				float imdbRating = jsonMovie.getInt("IMDB_Rating");
@@ -41,10 +40,10 @@ public class MovieDAO implements IMovieDAO {
 				String starTwo = jsonMovie.getString("Star2");
 				String starThree = jsonMovie.getString("Star3");
 				String starFour = jsonMovie.getString("Star4");
-				String overview =jsonMovie.getString("Overview");
+				String overview = jsonMovie.getString("Overview");
 				String gross = jsonMovie.getString("Gross");
-				
-				//map fields
+
+				// map fields
 				movie.setMovieId(movieId);
 				movie.setMovieName(movieName);
 				movie.setPosterLink(posterLink);
@@ -58,11 +57,11 @@ public class MovieDAO implements IMovieDAO {
 				movie.setStarFour(starFour);
 				movie.setOverview(overview);
 				movie.setGross(gross);
-				
+
 				allMovies.add(movie);
-				
+
 			}
-		} catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return allMovies;

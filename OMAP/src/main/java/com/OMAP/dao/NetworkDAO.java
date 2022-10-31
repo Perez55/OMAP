@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class NetworkDAO {
 
-
 	/**
 	 * Return the data found at the given endpoint
+	 * 
 	 * @param endpoint a URL or other location where we can find data.
 	 * @return All of the data returned as one string.
 	 * @throws Exception
 	 */
-	public String request(String endpoint) throws Exception  {
+	public String request(String endpoint) throws Exception {
 		StringBuilder sb = new StringBuilder();
 
 		URL url = new URL(endpoint);
