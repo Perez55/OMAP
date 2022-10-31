@@ -41,7 +41,9 @@ public class NetworkDAO {
 				// reading the next line
 				inputLine = bufferedReader.readLine();
 			}
-		} finally {
+		} 
+		// Terminate the session and return the built string
+		finally {
 			urlConnection.disconnect();
 		}
 		return sb.toString();

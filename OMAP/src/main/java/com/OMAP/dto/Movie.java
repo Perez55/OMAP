@@ -5,7 +5,7 @@ public class Movie {
 		
 	}
 	
-	// Getters and Setters
+	// Instantiate variables for Movie object
 	public int movieId;
 	public String movieName; // series_title in json
 	public String posterLink; // url img to movie poster
@@ -20,6 +20,7 @@ public class Movie {
 	public String overview;
 	public String gross;
 
+	// Getters and Setters
 	public String getMovieName() {
 		return movieName;
 	}
@@ -98,5 +99,4 @@ public class Movie {
 	public void setMovieId(int movieId) {
 		this.movieId = movieId;
 	}
-	
 }

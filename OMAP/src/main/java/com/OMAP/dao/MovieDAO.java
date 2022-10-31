@@ -63,9 +63,11 @@ public class MovieDAO implements IMovieDAO {
 				allMovies.add(movie);
 			}
 		} 
+		// Any Exception will be caught and returned to the user in the ouput
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		// Return ArrayList full of movie objects
 		return allMovies;
 	}
 }
