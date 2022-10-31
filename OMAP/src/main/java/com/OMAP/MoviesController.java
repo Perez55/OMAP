@@ -27,7 +27,7 @@ public class MoviesController {
 			allMovies = moviedao.getMovies();
 			testMovies = allMovies.subList(63, 70); // filtering the array for these elements just to test display
 		} 
-		// Any Exception will be caught and returned to the user in the ouput
+		// Any Exception will be caught and returned to the user in the output
 		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

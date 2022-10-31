@@ -63,7 +63,7 @@ public class MovieDAO implements IMovieDAO {
 				allMovies.add(movie);
 			}
 		} 
-		// Any Exception will be caught and returned to the user in the ouput
+		// Any Exception will be caught and returned to the user in the output
 		catch(Exception e) {
 			e.printStackTrace();
 		}
