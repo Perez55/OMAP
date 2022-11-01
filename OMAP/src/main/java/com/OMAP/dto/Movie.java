@@ -4,9 +4,11 @@ public class Movie {
 	public Movie () {
 		
 	}
+	
+	// Instantiate variables for Movie object
 	public int movieId;
-	public String movieName;// series_title in json
-	public String posterLink;// url img to movie poster
+	public String movieName; // series_title in json
+	public String posterLink; // url img to movie poster
 	public int year;
 	public float imdbRating;
 	public String runtine;
@@ -17,6 +19,8 @@ public class Movie {
 	public String starFour;
 	public String overview;
 	public String gross;
+
+	// Getters and Setters
 	public String getMovieName() {
 		return movieName;
 	}
@@ -95,5 +99,4 @@ public class Movie {
 	public void setMovieId(int movieId) {
 		this.movieId = movieId;
 	}
-	
 }

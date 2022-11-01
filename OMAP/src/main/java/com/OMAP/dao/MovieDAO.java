@@ -1,37 +1,38 @@
 package com.OMAP.dao;
-import com.OMAP.dto.Movie;
 
+import com.OMAP.dto.Movie;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class MovieDAO implements IMovieDAO {
-	
 	@Autowired
 	NetworkDAO networkDAO;
-	
-	
+	/** 
+	 * @return List<Movie>
+	 * @throws Exception
+	 */
 	public List<Movie> getMovies() throws Exception {
+		// Instantiate ArrayList, JSON Endpoint, and JSON Array
 		List<Movie> allMovies = new ArrayList<Movie>();
 		
 		String rawJson = networkDAO.request("https://raw.githubusercontent.com/MrPandey2k/OMAP/main/movies.json");
 		
 		JSONArray movies = new JSONArray(rawJson);
-		//JSONArray movies = root.getJSONArray("");
 		
+		// Try-Catch to create movie object
 		try {
-			for(int i=0; i < movies.length(); i++) 
-			{
+			for(int i=0; i < movies.length(); i++) {
 				// parse JSON
 				JSONObject jsonMovie = movies.getJSONObject(i);
 				Movie movie = new Movie();
 				int movieId = i;
-				var  movieName = jsonMovie.get("Series_Title").toString();
+				String  movieName = jsonMovie.get("Series_Title").toString();
 				String posterLink = jsonMovie.getString("Poster_Link");
 				int year = jsonMovie.getInt("Released_Year");
 				float imdbRating = jsonMovie.getInt("IMDB_Rating");
@@ -60,12 +61,13 @@ public class MovieDAO implements IMovieDAO {
 				movie.setGross(gross);
 				
 				allMovies.add(movie);
-				
 			}
-		} catch(Exception e){
+		} 
+		// Any Exception will be caught and returned to the user in the output
+		catch(Exception e) {
 			e.printStackTrace();
 		}
+		// Return ArrayList full of movie objects
 		return allMovies;
-
 	}
 }
