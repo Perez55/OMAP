@@ -11,6 +11,13 @@
 			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 			crossorigin="anonymous">
 		<script href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+		function rowClicked(value) {
+	        //location.href = "/myurl?param=" + value;
+	        alert('Movie ID: ' + value)
+	        location.href = `http://127.0.0.1:8080/movie-details?id=${value}`;
+	    }
+		</script>
 
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/style.css">
@@ -33,7 +40,9 @@
 				</thead>
 
 				<tbody class="tableBody">
-					<tr th:each="movies : ${testListMovies}">
+					<tr th:each="movies : ${testListMovies}"
+						th:some-field="${movies.movieId}" 
+						th:onclick="rowClicked(this.getAttribute('some-field'))">
 						<td th:text="${movies.movieName}" />
 						<td th:text="${movies.year}" />
 						<td th:text="${movies.runtine}" />
