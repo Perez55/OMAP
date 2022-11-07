@@ -14,7 +14,6 @@
 		<script type="text/javascript">
 		function rowClicked(value) {
 	        //location.href = "/myurl?param=" + value;
-	        alert('Movie ID: ' + value)
 	        location.href = `http://127.0.0.1:8080/movie-details?id=${value}`;
 	    }
 		</script>
@@ -43,9 +42,10 @@
 					<tr th:each="movies : ${testListMovies}"
 						th:some-field="${movies.movieId}" 
 						th:onclick="rowClicked(this.getAttribute('some-field'))">
+
 						<td th:text="${movies.movieName}" />
 						<td th:text="${movies.year}" />
-						<td th:text="${movies.runtine}" />
+						<td th:text="${movies.runtime}" />
 						<td th:text="${movies.director}" />
 						<td th:text="${movies.starOne}" />
 					</tr>

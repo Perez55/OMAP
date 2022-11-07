@@ -20,7 +20,9 @@
 	<body>
         <div class="container">
             <div class="btnHome">
-               <!-- <button type="button" id="homeBtn" class="btn btn-primary">Home</button> --> 
+                <a href="/list" class="buttonLink">
+				<button href="/list" type="button" class="btn btn-danger">Home</button>
+			</a>
             </div>
             <div class="row">
                 <div class="col-sm-3">
@@ -50,11 +52,13 @@
                 </div>
 
 			<div class="col-sm-2">
-				<img th:src="${selectedMovie.posterLink}"
-					class="rounded" id="moviePoster" alt="Movie Poster">
+				<img th:src="${selectedMovie.posterLink}" class="rounded"
+					id="moviePoster" alt="Movie Poster">
 
-                    <h6 th:text="${selectedMovie.runtine}"></h6>
-                    <h6 th:text="${selectedMovie.imdbRating}"></h6>
+				<h6 th:text="${selectedMovie.runtime}"></h6>
+				<h6 th:text="${selectedMovie.genre}"></h6>
+
+				<h6 th:text="${selectedMovie.imdbRating}"></h6>
 			</div>
 		</div>
             
