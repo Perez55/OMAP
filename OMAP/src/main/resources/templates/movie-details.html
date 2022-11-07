@@ -18,12 +18,48 @@
 		<title>OMAP</title>
 	</head>
 	<body>
-		<div class="container">
-						<h4>Movie Details</h4>
-			<hr class="break">
-			<p th:text="${selectedMovie.movieName}" />
+        <div class="container">
+            <div class="btnHome">
+               <!-- <button type="button" id="homeBtn" class="btn btn-primary">Home</button> --> 
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3 th:text="${selectedMovie.movieName}"></h3>
+                    <h6 th:text="${selectedMovie.year}"></h6>
+                </div>
+
+            </div>
+
+                <hr class="break">
+            <div class="row">
+                <div class="col-sm-10">
+                <p th:text="${selectedMovie.overview}"></p>
+                    <hr class="break">
+                    <h6>Director</h6>
+                    <p th:text="${selectedMovie.director}"></p>
+
+                    <hr class="break">
+                    <h6>Stars</h6>
+                    <p th:text="${selectedMovie.starOne}"></p>
+                    <p th:text="${selectedMovie.starTwo}"></p>
+                   	<p th:text="${selectedMovie.starThree}"></p>
+              		<p th:text="${selectedMovie.starFour}"></p>
+   
+                    <hr class="break">
+
+                </div>
+
+			<div class="col-sm-2">
+				<img th:src="${selectedMovie.posterLink}"
+					class="rounded" id="moviePoster" alt="Movie Poster">
+
+                    <h6 th:text="${selectedMovie.runtine}"></h6>
+                    <h6 th:text="${selectedMovie.imdbRating}"></h6>
+			</div>
 		</div>
+            
 		<br />
 		<br />
+		</div>
 	</body>
 </html>
