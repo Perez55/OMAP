@@ -52,7 +52,7 @@ public class MoviesController {
 	// Mapping for localhost:8080/list
 	@GetMapping("/list")
 	public String list(Model model) {
-		model.addAttribute("testListMovies", testMovies);
+		model.addAttribute("testListMovies", allMovies);
 		return "list-movies";
 	}
 
