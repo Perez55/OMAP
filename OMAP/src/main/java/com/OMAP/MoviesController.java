@@ -43,12 +43,12 @@ public class MoviesController {
 	}
 
 	@RequestMapping("/movie-details")
-	public String movieDetails(@RequestParam(name="id", required=true) int id, Model model) {
+	public String movieDetails(@RequestParam(name = "id", required = true) int id, Model model) {
 		Movie selectedMovie = allMovies.get(id);
-		model.addAttribute("selectedMovie",selectedMovie);
+		model.addAttribute("selectedMovie", selectedMovie);
 		return "movie-details";
 	}
-	
+
 	// Mapping for localhost:8080/list
 	@GetMapping("/list")
 	public String list(Model model) {
