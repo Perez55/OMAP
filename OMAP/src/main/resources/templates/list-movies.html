@@ -45,6 +45,7 @@
 				<tr th:each="movies : ${testListMovies}"
 					th:some-field="${movies.movieId}"
 					th:onclick="rowClicked(this.getAttribute('some-field'))">
+					<!-- Suggestion: Make the poster a little bigger -->
 					<td><img th:src="${movies.posterLink}" class="rounded"
 						id="moviePoster" alt="Movie Poster"></td>
 					<td th:text="${movies.movieName}" />
